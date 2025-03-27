@@ -1,8 +1,11 @@
 package com.nitesh.filefeed.controller;
 
+import com.nitesh.filefeed.model.entity.FileEntity;
+import com.nitesh.filefeed.repository.FileRepository;
 import com.nitesh.filefeed.service.FileUploadService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.core.io.buffer.DataBufferUtils;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +14,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import reactor.core.publisher.Mono;
 
+import java.util.Objects;
+import java.util.concurrent.atomic.AtomicReference;
+
 @RestController
 @RequestMapping("/api/files")
 @RequiredArgsConstructor
@@ -18,19 +24,44 @@ import reactor.core.publisher.Mono;
 public class FileController {
 
     private final FileUploadService fileService;
+    private final FileRepository fileRepository;
 
     @PostMapping("/upload")
-    public Mono<String> uploadFile(@RequestPart ("file")  Mono<FilePart> file) {
-        log.error("ENtered here......................." +  file);
-        file.doOnNext(fp->{
-           if(fp==null){
-               throw new RuntimeException("Failed..");
-           }
+    public Mono<String> uploadFile(Mono<FilePart> file) {
+        return file.flatMap(filePart -> {
+            // Log and extract details from FilePart
+            log.error("Entered Here....." + filePart.filename());
+
+            // Extract content type
+            String contentType = Objects.requireNonNull(filePart.headers().getContentType()).toString();
+
+            // Process file content (combine chunks into byte array)
+            return DataBufferUtils.join(filePart.content())
+                    .map(dataBuffer -> {
+                        log.error("Pricing to check 213232432434343");
+                        byte[] fileBytes = new byte[dataBuffer.readableByteCount()];
+                        dataBuffer.read(fileBytes);
+                        return fileBytes;
+                    })
+                    .flatMap(fileBytes -> {
+                        // Create FileEntity and set the properties
+                        log.error("Pricing to check 1234");
+                        FileEntity fileEntity = new FileEntity();
+                        fileEntity.setFileData(fileBytes);
+                        fileEntity.setFilename(filePart.filename());
+                        fileEntity.setContentType(contentType);
+
+                        // Save file entity to the repository and return the Mono<FileEntity>
+                        return fileRepository.save(fileEntity);  // Here we return Mono<FileEntity>
+                    })
+                    .map(savedFile -> "File uploaded successfully: " + savedFile.getId() + "--"+ savedFile.getFilename())// Process and return success message
+                    .onErrorResume(e -> {
+                        log.error("Error during file processing: " + e.getMessage());
+                        return Mono.just("Failed to upload file: " + e.getMessage());
+                    });
         });
-        return file
-                .doOnNext(fp -> log.error("Received file -->"+fp.filename()))
-                .then(Mono.just("file uploaded"));
     }
+
 
     @GetMapping("/{id}")
     public Mono<byte[]> getFileById(@PathVariable Long id) {

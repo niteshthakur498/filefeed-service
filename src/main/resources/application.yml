@@ -9,7 +9,7 @@ spring:
       max-request-size: 10MB
 
   r2dbc:
-    url: r2dbc:h2:file:///data/h2db/testdb
+    url: r2dbc:h2:file:///./data/h2db/testdb
     username: sa
     password: sa
     driverClassName: org.h2.Driver
@@ -22,7 +22,7 @@ spring:
   liquibase:
     enabled: true
     change-log: classpath:/db/changelog/db.changelog-master.yaml
-    url: jdbc:h2:file:/data/h2db/testdb
+    url: jdbc:h2:file:./data/h2db/testdb
     user: sa
     password: sa
 

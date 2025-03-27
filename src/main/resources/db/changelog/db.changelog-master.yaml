@@ -4,7 +4,7 @@ databaseChangeLog:
       author: niteshthakur
       changes:
         - createTable:
-            tableName: file_storage
+            tableName: file_entity
             columns:
               - column:
                   name: id
