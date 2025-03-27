@@ -2,6 +2,12 @@ spring:
   application:
     name: filefeed-service
 
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB  # Adjust as per your requirement
+      max-request-size: 10MB
+
   r2dbc:
     url: r2dbc:h2:file:///data/h2db/testdb
     username: sa
@@ -19,3 +25,9 @@ spring:
     url: jdbc:h2:file:/data/h2db/testdb
     user: sa
     password: sa
+
+#logging:
+#  level:
+#    org.springframework.web: DEBUG
+#    org.springframework.web.servlet: DEBUG
+#    org.springframework.web.reactive: DEBUG

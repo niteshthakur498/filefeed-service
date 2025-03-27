@@ -1,0 +1,486 @@
+25-03-27 10:05:58.236 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final 
+25-03-27 10:05:58.409 [main] INFO  c.n.filefeed.FilefeedApplication - Starting FilefeedApplication using Java 17.0.12 with PID 504 (C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed\target\classes started by Nitesh Thakur in C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed) 
+25-03-27 10:05:58.422 [main] INFO  c.n.filefeed.FilefeedApplication - No active profile set, falling back to 1 default profile: "default" 
+25-03-27 10:06:00.611 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode. 
+25-03-27 10:06:00.769 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 147 ms. Found 1 R2DBC repository interface. 
+25-03-27 10:06:04.526 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator' 
+25-03-27 10:06:05.892 [main] INFO  liquibase.database - Set default schema name to PUBLIC 
+25-03-27 10:06:06.524 [main] INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG 
+25-03-27 10:06:06.556 [main] INFO  liquibase.ui - Database is up to date, no changesets to execute 
+25-03-27 10:06:06.558 [main] INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG 
+25-03-27 10:06:06.562 [main] INFO  liquibase.util - UPDATE SUMMARY 
+25-03-27 10:06:06.562 [main] INFO  liquibase.util - Run:                          0 
+25-03-27 10:06:06.562 [main] INFO  liquibase.util - Previously run:               1 
+25-03-27 10:06:06.562 [main] INFO  liquibase.util - Filtered out:                 0 
+25-03-27 10:06:06.562 [main] INFO  liquibase.util - ------------------------------- 
+25-03-27 10:06:06.562 [main] INFO  liquibase.util - Total change sets:            1 
+25-03-27 10:06:06.564 [main] INFO  liquibase.util - Update summary generated 
+25-03-27 10:06:06.564 [main] INFO  liquibase.command - Command execution complete 
+25-03-27 10:06:08.270 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http) 
+25-03-27 10:06:08.291 [main] INFO  c.n.filefeed.FilefeedApplication - Started FilefeedApplication in 10.647 seconds (process running for 12.473) 
+25-03-27 10:06:17.796 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete 
+25-03-27 10:06:17.800 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete 
+25-03-27 10:06:24.358 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+25-03-27 10:06:24.361 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final 
+25-03-27 10:06:24.368 [background-preinit] DEBUG o.h.v.i.x.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration. 
+25-03-27 10:06:24.369 [background-preinit] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL 
+25-03-27 10:06:24.370 [background-preinit] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader 
+25-03-27 10:06:24.371 [background-preinit] DEBUG o.h.v.i.x.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only. 
+25-03-27 10:06:24.377 [background-preinit] DEBUG o.h.v.i.e.r.TraversableResolvers - Cannot find jakarta.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable. 
+25-03-27 10:06:24.452 [background-preinit] DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL 
+25-03-27 10:06:24.502 [main] INFO  c.n.filefeed.FilefeedApplication - Starting FilefeedApplication using Java 17.0.12 with PID 28128 (C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed\target\classes started by Nitesh Thakur in C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed) 
+25-03-27 10:06:24.522 [main] DEBUG c.n.filefeed.FilefeedApplication - Running with Spring Boot v3.4.4, Spring v6.2.5 
+25-03-27 10:06:24.534 [main] INFO  c.n.filefeed.FilefeedApplication - No active profile set, falling back to 1 default profile: "default" 
+25-03-27 10:06:24.543 [main] DEBUG o.s.boot.SpringApplication - Loading source class com.nitesh.filefeed.FilefeedApplication 
+25-03-27 10:06:24.892 [main] DEBUG o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Refreshing org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@2ccca26f 
+25-03-27 10:06:24.925 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' 
+25-03-27 10:06:24.979 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' 
+25-03-27 10:06:25.023 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider. 
+25-03-27 10:06:25.046 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator. 
+25-03-27 10:06:25.046 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver. 
+25-03-27 10:06:25.046 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider. 
+25-03-27 10:06:25.046 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider. 
+25-03-27 10:06:25.046 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory. 
+25-03-27 10:06:25.235 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed\target\classes\com\nitesh\filefeed\controller\FileController.class] 
+25-03-27 10:06:25.239 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Ignored because not a concrete top-level class: file [C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed\target\classes\com\nitesh\filefeed\repository\FileRepository.class] 
+25-03-27 10:06:25.241 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed\target\classes\com\nitesh\filefeed\service\impl\FileUploadDbService.class] 
+25-03-27 10:06:26.497 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode. 
+25-03-27 10:06:26.503 [main] DEBUG o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for R2DBC repositories in packages com.nitesh.filefeed. 
+25-03-27 10:06:26.512 [main] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed\target\classes\com\nitesh\filefeed\repository\FileRepository.class] 
+25-03-27 10:06:26.624 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 120 ms. Found 1 R2DBC repository interface. 
+25-03-27 10:06:27.582 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'propertySourcesPlaceholderConfigurer' 
+25-03-27 10:06:27.622 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor' 
+25-03-27 10:06:27.693 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor' 
+25-03-27 10:06:27.694 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'forceAutoProxyCreatorToUseClassProxying' 
+25-03-27 10:06:27.695 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory' 
+25-03-27 10:06:27.696 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' 
+25-03-27 10:06:27.707 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' 
+25-03-27 10:06:27.714 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' 
+25-03-27 10:06:27.717 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor' 
+25-03-27 10:06:27.717 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.internalConfigurationPropertiesBinder' 
+25-03-27 10:06:27.721 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'methodValidationPostProcessor' 
+25-03-27 10:06:27.731 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'methodValidationPostProcessor' via factory method to bean named 'environment' 
+25-03-27 10:06:27.746 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter' 
+25-03-27 10:06:27.762 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'persistenceExceptionTranslationPostProcessor' 
+25-03-27 10:06:27.762 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'persistenceExceptionTranslationPostProcessor' via factory method to bean named 'environment' 
+25-03-27 10:06:27.767 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator' 
+25-03-27 10:06:27.778 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'webServerFactoryCustomizerBeanPostProcessor' 
+25-03-27 10:06:27.779 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'healthEndpointGroupsBeanPostProcessor' 
+25-03-27 10:06:27.785 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor' 
+25-03-27 10:06:27.785 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' 
+25-03-27 10:06:27.790 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionAttributeSource' 
+25-03-27 10:06:27.795 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionInterceptor' 
+25-03-27 10:06:27.795 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'transactionInterceptor' via factory method to bean named 'transactionAttributeSource' 
+25-03-27 10:06:27.801 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.transaction.config.internalTransactionAdvisor' via factory method to bean named 'transactionAttributeSource' 
+25-03-27 10:06:27.802 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.transaction.config.internalTransactionAdvisor' via factory method to bean named 'transactionInterceptor' 
+25-03-27 10:06:27.804 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'meterRegistryPostProcessor' 
+25-03-27 10:06:27.807 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'meterRegistryPostProcessor' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@2ccca26f' 
+25-03-27 10:06:27.809 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'metricsRepositoryMethodInvocationListenerBeanPostProcessor' 
+25-03-27 10:06:27.811 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'observationRegistryPostProcessor' 
+25-03-27 10:06:27.814 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'serverCodecConfigurerEndpointObjectMapperBeanPostProcessor' 
+25-03-27 10:06:27.818 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'nettyReactiveWebServerFactory' 
+25-03-27 10:06:27.819 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.ReactiveWebServerFactoryConfiguration$EmbeddedNetty' 
+25-03-27 10:06:27.822 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'reactorResourceFactory' 
+25-03-27 10:06:27.822 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.reactor.netty.ReactorNettyConfigurations$ReactorResourceFactoryConfiguration' 
+25-03-27 10:06:27.822 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.reactor.netty-org.springframework.boot.autoconfigure.reactor.netty.ReactorNettyProperties' 
+25-03-27 10:06:27.845 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.BoundConfigurationProperties' 
+25-03-27 10:06:27.928 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'reactorResourceFactory' via factory method to bean named 'spring.reactor.netty-org.springframework.boot.autoconfigure.reactor.netty.ReactorNettyProperties' 
+25-03-27 10:06:27.943 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'nettyReactiveWebServerFactory' via factory method to bean named 'reactorResourceFactory' 
+25-03-27 10:06:27.997 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'reactiveWebServerFactoryCustomizer' 
+25-03-27 10:06:27.998 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.ReactiveWebServerFactoryAutoConfiguration' 
+25-03-27 10:06:28.000 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'server-org.springframework.boot.autoconfigure.web.ServerProperties' 
+25-03-27 10:06:28.118 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'reactiveWebServerFactoryCustomizer' via factory method to bean named 'server-org.springframework.boot.autoconfigure.web.ServerProperties' 
+25-03-27 10:06:28.121 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'sslBundleRegistry' 
+25-03-27 10:06:28.122 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration' 
+25-03-27 10:06:28.124 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.ssl-org.springframework.boot.autoconfigure.ssl.SslProperties' 
+25-03-27 10:06:28.135 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration' via constructor to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@2ccca26f' 
+25-03-27 10:06:28.135 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration' via constructor to bean named 'spring.ssl-org.springframework.boot.autoconfigure.ssl.SslProperties' 
+25-03-27 10:06:28.144 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'sslPropertiesSslBundleRegistrar' 
+25-03-27 10:06:28.145 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'fileWatcher' 
+25-03-27 10:06:28.155 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'sslPropertiesSslBundleRegistrar' via factory method to bean named 'fileWatcher' 
+25-03-27 10:06:28.188 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'nettyWebServerFactoryCustomizer' 
+25-03-27 10:06:28.188 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration$NettyWebServerFactoryCustomizerConfiguration' 
+25-03-27 10:06:28.191 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'nettyWebServerFactoryCustomizer' via factory method to bean named 'environment' 
+25-03-27 10:06:28.191 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'nettyWebServerFactoryCustomizer' via factory method to bean named 'server-org.springframework.boot.autoconfigure.web.ServerProperties' 
+25-03-27 10:06:28.219 [main] DEBUG reactor.util.Loggers - Using Slf4j logging framework 
+25-03-27 10:06:28.240 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework 
+25-03-27 10:06:28.244 [main] DEBUG i.n.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false 
+25-03-27 10:06:28.245 [main] DEBUG i.n.util.internal.PlatformDependent0 - Java version: 17 
+25-03-27 10:06:28.247 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available 
+25-03-27 10:06:28.249 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe base methods: all available 
+25-03-27 10:06:28.249 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available 
+25-03-27 10:06:28.250 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available 
+25-03-27 10:06:28.257 [main] DEBUG i.n.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled 
+25-03-27 10:06:28.259 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true 
+25-03-27 10:06:28.260 [main] DEBUG i.n.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @10d59286 
+25-03-27 10:06:28.261 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable 
+25-03-27 10:06:28.261 [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available 
+25-03-27 10:06:28.261 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\NITESH~1\AppData\Local\Temp (java.io.tmpdir) 
+25-03-27 10:06:28.261 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model) 
+25-03-27 10:06:28.262 [main] DEBUG i.n.util.internal.PlatformDependent - Platform: Windows 
+25-03-27 10:06:28.262 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes 
+25-03-27 10:06:28.262 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1 
+25-03-27 10:06:28.262 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available 
+25-03-27 10:06:28.262 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false 
+25-03-27 10:06:28.272 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024 
+25-03-27 10:06:28.272 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096 
+25-03-27 10:06:28.294 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple 
+25-03-27 10:06:28.294 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4 
+25-03-27 10:06:28.337 [main] DEBUG i.n.u.concurrent.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1 
+25-03-27 10:06:28.345 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'filefeedApplication' 
+25-03-27 10:06:28.346 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'fileController' 
+25-03-27 10:06:28.348 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'fileUploadDbService' 
+25-03-27 10:06:28.349 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'fileRepository' 
+25-03-27 10:06:28.355 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'r2dbc.named-queries#0' 
+25-03-27 10:06:28.357 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'r2dbc.FileRepository.fragments#0' 
+25-03-27 10:06:28.370 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'r2dbcEntityTemplate' 
+25-03-27 10:06:28.370 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.data.r2dbc.R2dbcDataAutoConfiguration' 
+25-03-27 10:06:28.371 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'r2dbcDatabaseClient' 
+25-03-27 10:06:28.371 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryDependentConfiguration' 
+25-03-27 10:06:28.371 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'connectionFactory' 
+25-03-27 10:06:28.371 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration$PooledConnectionFactoryConfiguration' 
+25-03-27 10:06:28.375 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.r2dbc-org.springframework.boot.autoconfigure.r2dbc.R2dbcProperties' 
+25-03-27 10:06:28.409 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'connectionFactory' via factory method to bean named 'spring.r2dbc-org.springframework.boot.autoconfigure.r2dbc.R2dbcProperties' 
+25-03-27 10:06:28.409 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'connectionFactory' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@2ccca26f' 
+25-03-27 10:06:28.409 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'propertiesR2dbcConnectionDetails' 
+25-03-27 10:06:28.409 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration' 
+25-03-27 10:06:28.409 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'propertiesR2dbcConnectionDetails' via factory method to bean named 'spring.r2dbc-org.springframework.boot.autoconfigure.r2dbc.R2dbcProperties' 
+25-03-27 10:06:28.475 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'r2dbcDatabaseClient' via factory method to bean named 'connectionFactory' 
+25-03-27 10:06:28.502 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.data.r2dbc.R2dbcDataAutoConfiguration' via constructor to bean named 'r2dbcDatabaseClient' 
+25-03-27 10:06:28.534 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'r2dbcConverter' 
+25-03-27 10:06:28.535 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'r2dbcMappingContext' 
+25-03-27 10:06:28.536 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'r2dbcCustomConversions' 
+25-03-27 10:06:28.664 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from interface io.r2dbc.spi.Row to class java.lang.Boolean as reading converter 
+25-03-27 10:06:28.664 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from interface io.r2dbc.spi.Row to class java.lang.Number as reading converter 
+25-03-27 10:06:28.665 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from interface io.r2dbc.spi.Row to class java.time.LocalDate as reading converter 
+25-03-27 10:06:28.665 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from interface io.r2dbc.spi.Row to class java.time.LocalDateTime as reading converter 
+25-03-27 10:06:28.665 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from interface io.r2dbc.spi.Row to class java.time.LocalTime as reading converter 
+25-03-27 10:06:28.665 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from interface io.r2dbc.spi.Row to class java.time.OffsetDateTime as reading converter 
+25-03-27 10:06:28.665 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from interface io.r2dbc.spi.Row to class java.lang.String as reading converter 
+25-03-27 10:06:28.665 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from interface io.r2dbc.spi.Row to class java.util.UUID as reading converter 
+25-03-27 10:06:28.665 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from interface io.r2dbc.spi.Row to class java.time.ZonedDateTime as reading converter 
+25-03-27 10:06:28.665 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.util.Date to class java.time.LocalDateTime as reading converter 
+25-03-27 10:06:28.665 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.time.LocalDateTime to class java.util.Date as writing converter 
+25-03-27 10:06:28.665 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.util.Date to class java.time.LocalDate as reading converter 
+25-03-27 10:06:28.665 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.time.LocalDate to class java.util.Date as writing converter 
+25-03-27 10:06:28.665 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.util.Date to class java.time.LocalTime as reading converter 
+25-03-27 10:06:28.665 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.time.LocalTime to class java.util.Date as writing converter 
+25-03-27 10:06:28.665 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.util.Date to class java.time.Instant as reading converter 
+25-03-27 10:06:28.665 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.time.Instant to class java.util.Date as writing converter 
+25-03-27 10:06:28.665 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.time.LocalDateTime to class java.time.Instant as reading converter 
+25-03-27 10:06:28.666 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.time.Instant to class java.time.LocalDateTime as reading converter 
+25-03-27 10:06:28.666 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.time.ZoneId to class java.lang.String as writing converter 
+25-03-27 10:06:28.666 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.lang.String to class java.time.ZoneId as reading converter 
+25-03-27 10:06:28.666 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.time.Duration to class java.lang.String as writing converter 
+25-03-27 10:06:28.666 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.lang.String to class java.time.Duration as reading converter 
+25-03-27 10:06:28.666 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.time.Period to class java.lang.String as writing converter 
+25-03-27 10:06:28.666 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.lang.String to class java.time.Period as reading converter 
+25-03-27 10:06:28.666 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.lang.String to class java.time.LocalDate as reading converter 
+25-03-27 10:06:28.666 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.lang.String to class java.time.LocalDateTime as reading converter 
+25-03-27 10:06:28.666 [main] DEBUG o.s.data.convert.CustomConversions - Adding converter from class java.lang.String to class java.time.Instant as reading converter 
+25-03-27 10:06:28.681 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'r2dbcManagedTypes' 
+25-03-27 10:06:28.682 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'r2dbcManagedTypes' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@2ccca26f' 
+25-03-27 10:06:28.687 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.AutoConfigurationPackages' 
+25-03-27 10:06:28.690 [main] DEBUG o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the package 'com.nitesh.filefeed'. Automatic @Repository and @Entity scanning is enabled. 
+25-03-27 10:06:28.695 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed\target\classes\com\nitesh\filefeed\model\entity\FileEntity.class] 
+25-03-27 10:06:28.702 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'r2dbcMappingContext' via factory method to bean named 'r2dbcCustomConversions' 
+25-03-27 10:06:28.702 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'r2dbcMappingContext' via factory method to bean named 'r2dbcManagedTypes' 
+25-03-27 10:06:29.015 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'startupTimeMetrics' 
+25-03-27 10:06:29.016 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.metrics.startup.StartupTimeMetricsListenerAutoConfiguration' 
+25-03-27 10:06:29.017 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'prometheusMeterRegistry' 
+25-03-27 10:06:29.017 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusMetricsExportAutoConfiguration' 
+25-03-27 10:06:29.021 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'prometheusConfig' 
+25-03-27 10:06:29.022 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'management.prometheus.metrics.export-org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusProperties' 
+25-03-27 10:06:29.032 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'prometheusConfig' via factory method to bean named 'management.prometheus.metrics.export-org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusProperties' 
+25-03-27 10:06:29.039 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'prometheusRegistry' 
+25-03-27 10:06:29.055 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'micrometerClock' 
+25-03-27 10:06:29.055 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration' 
+25-03-27 10:06:29.062 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'prometheusMeterRegistry' via factory method to bean named 'prometheusConfig' 
+25-03-27 10:06:29.062 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'prometheusMeterRegistry' via factory method to bean named 'prometheusRegistry' 
+25-03-27 10:06:29.064 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'prometheusMeterRegistry' via factory method to bean named 'micrometerClock' 
+25-03-27 10:06:29.100 [main] DEBUG i.m.c.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework 
+25-03-27 10:06:29.136 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'propertiesMeterFilter' 
+25-03-27 10:06:29.137 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties' 
+25-03-27 10:06:29.167 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'propertiesMeterFilter' via factory method to bean named 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties' 
+25-03-27 10:06:29.185 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'metricsHttpClientUriTagFilter' 
+25-03-27 10:06:29.186 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.observation.web.client.HttpClientObservationsAutoConfiguration$MeterFilterConfiguration' 
+25-03-27 10:06:29.187 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'management.observations-org.springframework.boot.actuate.autoconfigure.observation.ObservationProperties' 
+25-03-27 10:06:29.198 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'metricsHttpClientUriTagFilter' via factory method to bean named 'management.observations-org.springframework.boot.actuate.autoconfigure.observation.ObservationProperties' 
+25-03-27 10:06:29.198 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'metricsHttpClientUriTagFilter' via factory method to bean named 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties' 
+25-03-27 10:06:29.207 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'metricsHttpServerUriTagFilter' 
+25-03-27 10:06:29.208 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.observation.web.reactive.WebFluxObservationAutoConfiguration' 
+25-03-27 10:06:29.208 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.actuate.autoconfigure.observation.web.reactive.WebFluxObservationAutoConfiguration' via constructor to bean named 'management.observations-org.springframework.boot.actuate.autoconfigure.observation.ObservationProperties' 
+25-03-27 10:06:29.208 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'metricsHttpServerUriTagFilter' via factory method to bean named 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties' 
+25-03-27 10:06:29.245 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'startupTimeMetrics' via factory method to bean named 'prometheusMeterRegistry' 
+25-03-27 10:06:29.286 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'r2dbcConverter' via factory method to bean named 'r2dbcMappingContext' 
+25-03-27 10:06:29.287 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'r2dbcConverter' via factory method to bean named 'r2dbcCustomConversions' 
+25-03-27 10:06:29.389 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'r2dbcEntityTemplate' via factory method to bean named 'r2dbcConverter' 
+25-03-27 10:06:29.692 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'metricsRepositoryMethodInvocationListener' 
+25-03-27 10:06:29.692 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration' 
+25-03-27 10:06:29.692 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration' via constructor to bean named 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties' 
+25-03-27 10:06:29.692 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'repositoryTagsProvider' 
+25-03-27 10:06:29.698 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'metricsRepositoryMethodInvocationListener' via factory method to bean named 'repositoryTagsProvider' 
+25-03-27 10:06:29.704 [main] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.nitesh.filefeed.repository.FileRepository… 
+25-03-27 10:06:29.900 [main] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.nitesh.filefeed.repository.FileRepository. 
+25-03-27 10:06:29.933 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'fileUploadDbService' via constructor to bean named 'fileRepository' 
+25-03-27 10:06:29.934 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'fileController' via constructor to bean named 'fileUploadDbService' 
+25-03-27 10:06:29.936 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.web.reactive.config.DelegatingWebFluxConfiguration' 
+25-03-27 10:06:29.967 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'webHandler' 
+25-03-27 10:06:29.978 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'requestMappingHandlerMapping' 
+25-03-27 10:06:29.989 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'webFluxContentTypeResolver' 
+25-03-27 10:06:30.001 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'webFluxContentTypeResolver' 
+25-03-27 10:06:30.252 [main] DEBUG _.s.w.r.HandlerMapping.Mappings - 
+	c.n.f.c.FileController:
+	{GET /api/files/{id}}: getFileById(Long)
+	{POST /api/files/upload}: uploadFile(Mono) 
+25-03-27 10:06:30.264 [main] DEBUG o.s.w.r.r.m.a.RequestMappingHandlerMapping - 2 mappings in 'requestMappingHandlerMapping' 
+25-03-27 10:06:30.267 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'routerFunctionMapping' 
+25-03-27 10:06:30.267 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'serverCodecConfigurer' 
+25-03-27 10:06:30.298 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'endpointObjectMapper' 
+25-03-27 10:06:30.299 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.endpoint.jackson.JacksonEndpointAutoConfiguration' 
+25-03-27 10:06:30.301 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'routerFunctionMapping' via factory method to bean named 'serverCodecConfigurer' 
+25-03-27 10:06:30.312 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'resourceHandlerMapping' 
+25-03-27 10:06:30.312 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'resourceUrlProvider' 
+25-03-27 10:06:30.348 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'resourceHandlerMapping' via factory method to bean named 'resourceUrlProvider' 
+25-03-27 10:06:30.350 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'healthEndpointWebFluxHandlerMapping' 
+25-03-27 10:06:30.351 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.health.HealthEndpointReactiveWebExtensionConfiguration$WebFluxAdditionalHealthEndpointPathsConfiguration' 
+25-03-27 10:06:30.352 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'webEndpointDiscoverer' 
+25-03-27 10:06:30.352 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration' 
+25-03-27 10:06:30.352 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'management.endpoints.web-org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties' 
+25-03-27 10:06:30.356 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration' via constructor to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@2ccca26f' 
+25-03-27 10:06:30.356 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration' via constructor to bean named 'management.endpoints.web-org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties' 
+25-03-27 10:06:30.357 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'endpointOperationParameterMapper' 
+25-03-27 10:06:30.357 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration' 
+25-03-27 10:06:30.372 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'endpointMediaTypes' 
+25-03-27 10:06:30.381 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'webEndpointDiscoverer' via factory method to bean named 'endpointOperationParameterMapper' 
+25-03-27 10:06:30.381 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'webEndpointDiscoverer' via factory method to bean named 'endpointMediaTypes' 
+25-03-27 10:06:30.386 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'webEndpointPathMapper' 
+25-03-27 10:06:30.396 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'healthEndpointGroups' 
+25-03-27 10:06:30.397 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.health.HealthEndpointConfiguration' 
+25-03-27 10:06:30.397 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties' 
+25-03-27 10:06:30.485 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'healthEndpointGroups' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@2ccca26f' 
+25-03-27 10:06:30.485 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'healthEndpointGroups' via factory method to bean named 'management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties' 
+25-03-27 10:06:30.498 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'healthStatusAggregator' 
+25-03-27 10:06:30.498 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'healthStatusAggregator' via factory method to bean named 'management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties' 
+25-03-27 10:06:30.502 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'healthHttpCodeStatusMapper' 
+25-03-27 10:06:30.502 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'healthHttpCodeStatusMapper' via factory method to bean named 'management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties' 
+25-03-27 10:06:30.594 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'endpointCachingOperationInvokerAdvisor' 
+25-03-27 10:06:30.595 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'endpointCachingOperationInvokerAdvisor' via factory method to bean named 'environment' 
+25-03-27 10:06:30.624 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'webExposeExcludePropertyEndpointFilter' 
+25-03-27 10:06:30.629 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'webAccessPropertiesOperationFilter' 
+25-03-27 10:06:30.629 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'propertiesEndpointAccessResolver' 
+25-03-27 10:06:30.630 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'propertiesEndpointAccessResolver' via factory method to bean named 'environment' 
+25-03-27 10:06:30.638 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'webAccessPropertiesOperationFilter' via factory method to bean named 'propertiesEndpointAccessResolver' 
+25-03-27 10:06:30.697 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'healthEndpointWebFluxHandlerMapping' via factory method to bean named 'webEndpointDiscoverer' 
+25-03-27 10:06:30.697 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'healthEndpointWebFluxHandlerMapping' via factory method to bean named 'healthEndpointGroups' 
+25-03-27 10:06:30.763 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'healthEndpoint' 
+25-03-27 10:06:30.764 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'healthContributorRegistry' 
+25-03-27 10:06:30.764 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'sslHealthIndicator' 
+25-03-27 10:06:30.764 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.ssl.SslHealthContributorAutoConfiguration' 
+25-03-27 10:06:30.765 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'sslInfo' 
+25-03-27 10:06:30.765 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'management.health.ssl-org.springframework.boot.actuate.autoconfigure.ssl.SslHealthIndicatorProperties' 
+25-03-27 10:06:30.767 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'sslInfo' via factory method to bean named 'sslBundleRegistry' 
+25-03-27 10:06:30.767 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'sslInfo' via factory method to bean named 'management.health.ssl-org.springframework.boot.actuate.autoconfigure.ssl.SslHealthIndicatorProperties' 
+25-03-27 10:06:30.791 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'sslHealthIndicator' via factory method to bean named 'sslInfo' 
+25-03-27 10:06:30.854 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'diskSpaceHealthIndicator' 
+25-03-27 10:06:30.855 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthContributorAutoConfiguration' 
+25-03-27 10:06:30.855 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'management.health.diskspace-org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthIndicatorProperties' 
+25-03-27 10:06:30.856 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'diskSpaceHealthIndicator' via factory method to bean named 'management.health.diskspace-org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthIndicatorProperties' 
+25-03-27 10:06:30.867 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'pingHealthContributor' 
+25-03-27 10:06:30.867 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.health.HealthContributorAutoConfiguration' 
+25-03-27 10:06:30.882 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'r2dbcHealthContributor' 
+25-03-27 10:06:30.882 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.r2dbc.ConnectionFactoryHealthContributorAutoConfiguration' 
+25-03-27 10:06:30.921 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'r2dbcHealthContributor' via factory method to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@b91d8c4' 
+25-03-27 10:06:30.938 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'healthContributorRegistry' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@2ccca26f' 
+25-03-27 10:06:30.938 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'healthContributorRegistry' via factory method to bean named 'healthEndpointGroups' 
+25-03-27 10:06:30.938 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'healthContributorRegistry' via factory method to bean named 'sslHealthIndicator' 
+25-03-27 10:06:30.938 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'healthContributorRegistry' via factory method to bean named 'diskSpaceHealthIndicator' 
+25-03-27 10:06:30.938 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'healthContributorRegistry' via factory method to bean named 'pingHealthContributor' 
+25-03-27 10:06:30.938 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'healthContributorRegistry' via factory method to bean named 'r2dbcHealthContributor' 
+25-03-27 10:06:30.993 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'healthEndpoint' via factory method to bean named 'healthContributorRegistry' 
+25-03-27 10:06:30.993 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'healthEndpoint' via factory method to bean named 'healthEndpointGroups' 
+25-03-27 10:06:30.993 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'healthEndpoint' via factory method to bean named 'management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties' 
+25-03-27 10:06:31.177 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'reactiveHealthEndpointWebExtension' 
+25-03-27 10:06:31.177 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.health.HealthEndpointReactiveWebExtensionConfiguration' 
+25-03-27 10:06:31.178 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'reactiveHealthContributorRegistry' 
+25-03-27 10:06:31.178 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.health.ReactiveHealthEndpointConfiguration' 
+25-03-27 10:06:31.179 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'reactiveHealthContributorRegistry' via factory method to bean named 'sslHealthIndicator' 
+25-03-27 10:06:31.179 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'reactiveHealthContributorRegistry' via factory method to bean named 'diskSpaceHealthIndicator' 
+25-03-27 10:06:31.179 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'reactiveHealthContributorRegistry' via factory method to bean named 'pingHealthContributor' 
+25-03-27 10:06:31.179 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'reactiveHealthContributorRegistry' via factory method to bean named 'r2dbcHealthContributor' 
+25-03-27 10:06:31.179 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'reactiveHealthContributorRegistry' via factory method to bean named 'healthEndpointGroups' 
+25-03-27 10:06:31.216 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'reactiveHealthEndpointWebExtension' via factory method to bean named 'reactiveHealthContributorRegistry' 
+25-03-27 10:06:31.216 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'reactiveHealthEndpointWebExtension' via factory method to bean named 'healthEndpointGroups' 
+25-03-27 10:06:31.216 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'reactiveHealthEndpointWebExtension' via factory method to bean named 'management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties' 
+25-03-27 10:06:31.255 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'webEndpointReactiveHandlerMapping' 
+25-03-27 10:06:31.255 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.endpoint.web.reactive.WebFluxEndpointManagementContextConfiguration' 
+25-03-27 10:06:31.256 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'controllerEndpointDiscoverer' 
+25-03-27 10:06:31.277 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'controllerExposeExcludePropertyEndpointFilter' 
+25-03-27 10:06:31.281 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'management.endpoints.web.cors-org.springframework.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties' 
+25-03-27 10:06:31.289 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'webEndpointReactiveHandlerMapping' via factory method to bean named 'webEndpointDiscoverer' 
+25-03-27 10:06:31.290 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'webEndpointReactiveHandlerMapping' via factory method to bean named 'controllerEndpointDiscoverer' 
+25-03-27 10:06:31.290 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'webEndpointReactiveHandlerMapping' via factory method to bean named 'endpointMediaTypes' 
+25-03-27 10:06:31.290 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'webEndpointReactiveHandlerMapping' via factory method to bean named 'management.endpoints.web.cors-org.springframework.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties' 
+25-03-27 10:06:31.290 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'webEndpointReactiveHandlerMapping' via factory method to bean named 'management.endpoints.web-org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties' 
+25-03-27 10:06:31.290 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'webEndpointReactiveHandlerMapping' via factory method to bean named 'environment' 
+25-03-27 10:06:31.316 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator' 
+25-03-27 10:06:31.335 [main] DEBUG o.s.b.a.e.w.r.WebFluxEndpointHandlerMapping - 3 mappings in 'webEndpointReactiveHandlerMapping' 
+25-03-27 10:06:31.336 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'controllerEndpointHandlerMapping' 
+25-03-27 10:06:31.337 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'controllerEndpointHandlerMapping' via factory method to bean named 'controllerEndpointDiscoverer' 
+25-03-27 10:06:31.337 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'controllerEndpointHandlerMapping' via factory method to bean named 'management.endpoints.web.cors-org.springframework.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties' 
+25-03-27 10:06:31.337 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'controllerEndpointHandlerMapping' via factory method to bean named 'management.endpoints.web-org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties' 
+25-03-27 10:06:31.337 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'controllerEndpointHandlerMapping' via factory method to bean named 'propertiesEndpointAccessResolver' 
+25-03-27 10:06:31.364 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'requestMappingHandlerAdapter' 
+25-03-27 10:06:31.364 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'webFluxAdapterRegistry' 
+25-03-27 10:06:31.372 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'webFluxConversionService' 
+25-03-27 10:06:31.400 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'webFluxValidator' 
+25-03-27 10:06:31.437 [main] DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL 
+25-03-27 10:06:31.452 [main] DEBUG o.h.v.i.e.AbstractConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator 
+25-03-27 10:06:31.460 [main] DEBUG o.h.v.i.e.AbstractConfigurationImpl - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory 
+25-03-27 10:06:31.470 [main] DEBUG o.h.v.i.x.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration. 
+25-03-27 10:06:31.470 [main] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via user class loader 
+25-03-27 10:06:31.470 [main] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL 
+25-03-27 10:06:31.470 [main] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader 
+25-03-27 10:06:31.470 [main] DEBUG o.h.v.i.x.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only. 
+25-03-27 10:06:31.474 [main] DEBUG o.h.v.i.e.r.TraversableResolvers - Cannot find jakarta.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable. 
+25-03-27 10:06:31.478 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider. 
+25-03-27 10:06:31.492 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator. 
+25-03-27 10:06:31.492 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver. 
+25-03-27 10:06:31.494 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider. 
+25-03-27 10:06:31.494 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider. 
+25-03-27 10:06:31.494 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory. 
+25-03-27 10:06:31.539 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'webFluxAdapterRegistry' 
+25-03-27 10:06:31.540 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'serverCodecConfigurer' 
+25-03-27 10:06:31.540 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'webFluxConversionService' 
+25-03-27 10:06:31.540 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'webFluxContentTypeResolver' 
+25-03-27 10:06:31.540 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'webFluxValidator' 
+25-03-27 10:06:31.843 [main] DEBUG o.s.w.r.r.m.a.ControllerMethodResolver - ControllerAdvice beans: none 
+25-03-27 10:06:31.845 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'handlerFunctionAdapter' 
+25-03-27 10:06:31.856 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'simpleHandlerAdapter' 
+25-03-27 10:06:31.858 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'webFluxWebSocketHandlerAdapter' 
+25-03-27 10:06:31.896 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'responseEntityResultHandler' 
+25-03-27 10:06:31.896 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'responseEntityResultHandler' via factory method to bean named 'webFluxAdapterRegistry' 
+25-03-27 10:06:31.897 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'responseEntityResultHandler' via factory method to bean named 'serverCodecConfigurer' 
+25-03-27 10:06:31.897 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'responseEntityResultHandler' via factory method to bean named 'webFluxContentTypeResolver' 
+25-03-27 10:06:31.909 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'responseBodyResultHandler' 
+25-03-27 10:06:31.909 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'responseBodyResultHandler' via factory method to bean named 'webFluxAdapterRegistry' 
+25-03-27 10:06:31.909 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'responseBodyResultHandler' via factory method to bean named 'serverCodecConfigurer' 
+25-03-27 10:06:31.909 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'responseBodyResultHandler' via factory method to bean named 'webFluxContentTypeResolver' 
+25-03-27 10:06:31.912 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'viewResolutionResultHandler' 
+25-03-27 10:06:31.912 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'viewResolutionResultHandler' via factory method to bean named 'webFluxAdapterRegistry' 
+25-03-27 10:06:31.912 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'viewResolutionResultHandler' via factory method to bean named 'webFluxContentTypeResolver' 
+25-03-27 10:06:31.953 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'serverResponseResultHandler' 
+25-03-27 10:06:31.954 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'serverResponseResultHandler' via factory method to bean named 'serverCodecConfigurer' 
+25-03-27 10:06:31.961 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'responseStatusExceptionHandler' 
+25-03-27 10:06:31.977 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'localeContextResolver' 
+25-03-27 10:06:31.988 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'data-r2dbc.repository-aot-processor#0' 
+25-03-27 10:06:31.999 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration' 
+25-03-27 10:06:32.000 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' 
+25-03-27 10:06:32.000 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'standardJacksonObjectMapperBuilderCustomizer' 
+25-03-27 10:06:32.000 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' 
+25-03-27 10:06:32.009 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'standardJacksonObjectMapperBuilderCustomizer' via factory method to bean named 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' 
+25-03-27 10:06:32.010 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'parameterNamesModule' 
+25-03-27 10:06:32.010 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' 
+25-03-27 10:06:32.038 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jsonMixinModule' 
+25-03-27 10:06:32.039 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonMixinConfiguration' 
+25-03-27 10:06:32.039 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jsonMixinModuleEntries' 
+25-03-27 10:06:32.039 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'jsonMixinModuleEntries' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@2ccca26f' 
+25-03-27 10:06:32.071 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'jsonMixinModule' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@2ccca26f' 
+25-03-27 10:06:32.072 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'jsonMixinModule' via factory method to bean named 'jsonMixinModuleEntries' 
+25-03-27 10:06:32.086 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jsonComponentModule' 
+25-03-27 10:06:32.086 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' 
+25-03-27 10:06:32.104 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' 
+25-03-27 10:06:32.104 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' 
+25-03-27 10:06:32.105 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jacksonObjectMapper' 
+25-03-27 10:06:32.105 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'jacksonObjectMapperBuilder' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@2ccca26f' 
+25-03-27 10:06:32.105 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'jacksonObjectMapperBuilder' via factory method to bean named 'standardJacksonObjectMapperBuilderCustomizer' 
+25-03-27 10:06:32.112 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'jacksonObjectMapper' via factory method to bean named 'jacksonObjectMapperBuilder' 
+25-03-27 10:06:32.147 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration$DefaultCodecsConfiguration' 
+25-03-27 10:06:32.149 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'defaultCodecCustomizer' 
+25-03-27 10:06:32.149 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.codec-org.springframework.boot.autoconfigure.codec.CodecProperties' 
+25-03-27 10:06:32.150 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'defaultCodecCustomizer' via factory method to bean named 'spring.codec-org.springframework.boot.autoconfigure.codec.CodecProperties' 
+25-03-27 10:06:32.155 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration$JacksonCodecConfiguration' 
+25-03-27 10:06:32.156 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jacksonCodecCustomizer' 
+25-03-27 10:06:32.156 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'jacksonCodecCustomizer' via factory method to bean named 'jacksonObjectMapper' 
+25-03-27 10:06:32.162 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration' 
+25-03-27 10:06:32.163 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' 
+25-03-27 10:06:32.164 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'defaultValidator' 
+25-03-27 10:06:32.164 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'defaultValidator' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@2ccca26f' 
+25-03-27 10:06:32.183 [main] DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL 
+25-03-27 10:06:32.197 [main] DEBUG o.h.v.i.e.AbstractConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator 
+25-03-27 10:06:32.197 [main] DEBUG o.h.v.i.e.AbstractConfigurationImpl - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory 
+25-03-27 10:06:32.206 [main] DEBUG o.h.v.i.x.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration. 
+25-03-27 10:06:32.207 [main] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via user class loader 
+25-03-27 10:06:32.207 [main] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL 
+25-03-27 10:06:32.207 [main] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader 
+25-03-27 10:06:32.207 [main] DEBUG o.h.v.i.x.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only. 
+25-03-27 10:06:32.211 [main] DEBUG o.h.v.i.e.r.TraversableResolvers - Cannot find jakarta.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable. 
+25-03-27 10:06:32.211 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider. 
+25-03-27 10:06:32.211 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator. 
+25-03-27 10:06:32.211 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver. 
+25-03-27 10:06:32.211 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider. 
+25-03-27 10:06:32.211 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider. 
+25-03-27 10:06:32.211 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory. 
+25-03-27 10:06:32.213 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.ReactiveMultipartAutoConfiguration' 
+25-03-27 10:06:32.213 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'defaultPartHttpMessageReaderCustomizer' 
+25-03-27 10:06:32.214 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.webflux.multipart-org.springframework.boot.autoconfigure.web.reactive.ReactiveMultipartProperties' 
+25-03-27 10:06:32.215 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'defaultPartHttpMessageReaderCustomizer' via factory method to bean named 'spring.webflux.multipart-org.springframework.boot.autoconfigure.web.reactive.ReactiveMultipartProperties' 
+25-03-27 10:06:32.222 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.WebSessionIdResolverAutoConfiguration' 
+25-03-27 10:06:32.223 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.webflux-org.springframework.boot.autoconfigure.web.reactive.WebFluxProperties' 
+25-03-27 10:06:32.226 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.WebSessionIdResolverAutoConfiguration' via constructor to bean named 'server-org.springframework.boot.autoconfigure.web.ServerProperties' 
+25-03-27 10:06:32.227 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.WebSessionIdResolverAutoConfiguration' via constructor to bean named 'spring.webflux-org.springframework.boot.autoconfigure.web.reactive.WebFluxProperties' 
+25-03-27 10:06:32.227 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'webSessionIdResolver' 
+25-03-27 10:06:32.246 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.error.ErrorWebFluxAutoConfiguration' 
+25-03-27 10:06:32.246 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.error.ErrorWebFluxAutoConfiguration' via constructor to bean named 'server-org.springframework.boot.autoconfigure.web.ServerProperties' 
+25-03-27 10:06:32.246 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'errorWebExceptionHandler' 
+25-03-27 10:06:32.248 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'errorAttributes' 
+25-03-27 10:06:32.277 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties' 
+25-03-27 10:06:32.376 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'errorWebExceptionHandler' via factory method to bean named 'errorAttributes' 
+25-03-27 10:06:32.376 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'errorWebExceptionHandler' via factory method to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties' 
+25-03-27 10:06:32.376 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'errorWebExceptionHandler' via factory method to bean named 'serverCodecConfigurer' 
+25-03-27 10:06:32.376 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'errorWebExceptionHandler' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@2ccca26f' 
+25-03-27 10:06:32.551 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.HttpHandlerAutoConfiguration$AnnotationConfig' 
+25-03-27 10:06:32.551 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.HttpHandlerAutoConfiguration$AnnotationConfig' via constructor to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@2ccca26f' 
+25-03-27 10:06:32.552 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'httpHandler' 
+25-03-27 10:06:32.575 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'observationRegistry' 
+25-03-27 10:06:32.575 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.observation.ObservationAutoConfiguration' 
+25-03-27 10:06:32.642 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'propertiesObservationFilter' 
+25-03-27 10:06:32.643 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'propertiesObservationFilter' via factory method to bean named 'management.observations-org.springframework.boot.actuate.autoconfigure.observation.ObservationProperties' 
+25-03-27 10:06:32.700 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'metricsObservationHandlerGrouping' 
+25-03-27 10:06:32.700 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.observation.ObservationAutoConfiguration$OnlyMetricsConfiguration' 
+25-03-27 10:06:32.710 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'defaultMeterObservationHandler' 
+25-03-27 10:06:32.711 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.observation.ObservationAutoConfiguration$MeterObservationHandlerConfiguration$OnlyMetricsMeterObservationHandlerConfiguration' 
+25-03-27 10:06:32.711 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'defaultMeterObservationHandler' via factory method to bean named 'prometheusMeterRegistry' 
+25-03-27 10:06:32.711 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'defaultMeterObservationHandler' via factory method to bean named 'management.observations-org.springframework.boot.actuate.autoconfigure.observation.ObservationProperties' 
+25-03-27 10:06:32.772 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'defaultServerRequestObservationConvention' 
+25-03-27 10:06:33.092 [main] DEBUG o.s.w.s.a.HttpWebHandlerAdapter - enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data 
+25-03-27 10:06:33.096 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.HttpHandlerAutoConfiguration' 
+25-03-27 10:06:33.097 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration' 
+25-03-27 10:06:33.097 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'applicationAvailability' 
+25-03-27 10:06:33.110 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.availability.AvailabilityHealthContributorAutoConfiguration' 
+25-03-27 10:06:33.130 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration' 
+25-03-27 10:06:33.131 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizationAutoConfiguration' 
+25-03-27 10:06:33.131 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'platformTransactionManagerCustomizers' 
+25-03-27 10:06:33.132 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionExecutionListeners' 
+25-03-27 10:06:33.141 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.transaction-org.springframework.boot.autoconfigure.transaction.TransactionProperties' 
+25-03-27 10:06:33.150 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'healthEndpointGroupMembershipValidator' 
+25-03-27 10:06:33.151 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'healthEndpointGroupMembershipValidator' via factory method to bean named 'management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties' 
+25-03-27 10:06:33.151 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'healthEndpointGroupMembershipValidator' via factory method to bean named 'healthContributorRegistry' 
+25-03-27 10:06:33.153 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.health.HealthEndpointAutoConfiguration' 
+25-03-27 10:06:33.154 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration' 
+25-03-27 10:06:33.156 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties' 
+25-03-27 10:06:33.159 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration' via constructor to bean named 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties' 
+25-03-27 10:06:33.161 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.info.InfoContributorAutoConfiguration' 
+25-03-27 10:06:33.198 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'management.info-org.springframework.boot.actuate.autoconfigure.info.InfoContributorProperties' 
+25-03-27 10:06:33.205 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'pathMappedEndpoints' 
+25-03-27 10:06:33.209 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'pathMappedEndpoints' via factory method to bean named 'webEndpointDiscoverer' 
+25-03-27 10:06:33.209 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'pathMappedEndpoints' via factory method to bean named 'controllerEndpointDiscoverer' 
+25-03-27 10:06:33.218 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration$CustomizerConfiguration' 
+25-03-27 10:06:33.219 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration$LiquibaseConfiguration' 
+25-03-27 10:06:33.219 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'liquibaseConnectionDetails' 
+25-03-27 10:06:33.220 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.liquibase-org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties' 
+25-03-27 10:06:33.254 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'liquibaseConnectionDetails' via factory method to bean named 'spring.liquibase-org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties' 
+25-03-27 10:06:33.259 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'liquibase' 
+25-03-27 10:06:33.264 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'liquibase' via factory method to bean named 'spring.liquibase-org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties' 
+25-03-27 10:06:33.264 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'liquibase' via factory method to bean named 'liquibaseConnectionDetails' 
+25-03-27 10:06:34.264 [main] DEBUG o.s.j.d.SimpleDriverDataSource - Creating new JDBC Driver Connection to [jdbc:h2:file:/data/h2db/testdb] 

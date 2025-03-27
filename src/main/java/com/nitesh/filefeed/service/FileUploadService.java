@@ -6,4 +6,6 @@ import reactor.core.publisher.Mono;
 
 public interface FileUploadService {
     public Mono<FileEntity> uploadFile(MultipartFile file);
+
+    public Mono<FileEntity> getFileById(Long id);
 }

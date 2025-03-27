@@ -27,4 +27,9 @@ public class FileUploadDbService implements FileUploadService {
             return Mono.error(new RuntimeException("Failed to upload file", e));
         }
     }
+
+    @Override
+    public Mono<FileEntity> getFileById(Long id) {
+        return fileRepository.findById(id);
+    }
 }
