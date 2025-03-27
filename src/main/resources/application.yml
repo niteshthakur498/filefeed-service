@@ -3,9 +3,19 @@ spring:
     name: filefeed-service
 
   r2dbc:
-    url: r2dbc:postgresql://localhost:5432/yourdb
-    username: yourusername
-    password: yourpassword
-    liquibase:
-      enabled: true
-      change-log: classpath:/db/changelog/db.changelog-master.yaml
+    url: r2dbc:h2:file:///data/h2db/testdb
+    username: sa
+    password: sa
+    driverClassName: org.h2.Driver
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+    h2:
+      console:
+        enabled: true
+        path: /h2-console
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/db.changelog-master.yaml
+    url: jdbc:h2:file:/data/h2db/testdb
+    user: sa
+    password: sa
