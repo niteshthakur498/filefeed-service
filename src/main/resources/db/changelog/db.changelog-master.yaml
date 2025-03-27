@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: niteshthakur
+      changes:
+        - createTable:
+            tableName: file_storage
+            columns:
+              - column:
+                  name: id
+                  type: serial
+                  autoIncrement: true
+              - column:
+                  name: filename
+                  type: varchar(255)
+              - column:
+                  name: content_type
+                  type: varchar(255)
+              - column:
+                  name: file_data
+                  type: bytea
