@@ -1,7 +1,6 @@
 spring:
   application:
     name: filefeed-service
-
   servlet:
     webflux:
       multipart:
@@ -27,11 +26,12 @@ spring:
     user: sa
     password: sa
 
-#logging:
-#  level:
-#    org.springframework.web: DEBUG
-#    org.springframework.web.servlet: DEBUG
-#    org.springframework.web.reactive: DEBUG
+file-feed:
+  supported-formats:
+    - pdf
+    - xlsx
+    - json
+
 
 
 management:

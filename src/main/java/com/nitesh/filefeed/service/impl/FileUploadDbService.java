@@ -1,8 +1,10 @@
 package com.nitesh.filefeed.service.impl;
 
+import com.nitesh.filefeed.exception.UnsupportedFileFormatException;
 import com.nitesh.filefeed.model.entity.FileEntity;
 import com.nitesh.filefeed.repository.FileRepository;
 import com.nitesh.filefeed.service.FileUploadService;
+import com.nitesh.filefeed.utils.FileFormatValidator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.buffer.DataBufferUtils;
@@ -19,13 +21,16 @@ import java.io.FileNotFoundException;
 public class FileUploadDbService implements FileUploadService {
 
     private final FileRepository fileRepository;
+    private final FileFormatValidator fileFormatValidator;
 
     @Override
     public Mono<FileEntity> processAndSaveFile(Mono<FilePart> file) {
         return file.flatMap(filePart -> {
             // Extract content type (default to "application/octet-stream" if not provided)
             String contentType = StringUtils.isEmpty(filePart.headers().getContentType().toString()) ? "application/octet-stream" : filePart.headers().getContentType().toString();
-
+            if(!fileFormatValidator.isValidFormat(filePart.filename())){
+                throw new UnsupportedFileFormatException("UnSupported File Format....");
+            }
             // Use DataBufferUtils to collect the file content
             return DataBufferUtils.join(filePart.content()) // Collects all data buffers into a single buffer
                     .map(dataBuffer -> {

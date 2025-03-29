@@ -23,12 +23,13 @@ public class FileController {
     private final FileUploadService fileUploadService;
 
     @PostMapping("/upload")
-    public Mono<String> uploadFile(Mono<FilePart> file) {
+    public Mono<ResponseEntity<String>> uploadFile(Mono<FilePart> file) {
         return fileUploadService.processAndSaveFile(file)
-                .map(savedFile -> "File uploaded successfully: " + savedFile.getId() + "--" + savedFile.getFilename())
+                .doOnSuccess(savedFile -> log.info("File uploaded successfully: {}", savedFile.getFilename()))
+                .map(savedFile -> ResponseEntity.status(HttpStatus.OK).body("File uploaded successfully: " + savedFile.getId() + "--" + savedFile.getFilename()))
                 .onErrorResume(e -> {
                     log.error("Error during file processing: {}", e.getMessage());
-                    return Mono.just("Failed to upload file: " + e.getMessage());
+                    return Mono.error(e);
                 });
     }
 
@@ -47,6 +48,7 @@ public class FileController {
                     // Create a DataBuffer from byte[] (wrap the byte[] into DataBuffer)
                     DataBuffer dataBuffer = factory.wrap(fileEntity.getFileData());  // wrap byte[] into DataBuffer
 
+                    log.info("File retrieved successfully: {}", fileEntity.getFilename());
                     return Mono.just(ResponseEntity.ok()
                             .headers(headers)
                             .body(dataBuffer));  // Returning DataBuffer for reactive processing
@@ -62,7 +64,10 @@ public class FileController {
     public Mono<ResponseEntity<String>> deleteFile(@PathVariable Long id) {
         log.info("Request to delete file with ID: {}", id);
         return fileUploadService.deleteFile(id)
-                .map(deletedMessage -> ResponseEntity.ok(deletedMessage))
+                .map(deletedMessage -> {
+                    log.info("File deleted successfully: {}", id);
+                    return ResponseEntity.ok(deletedMessage);
+                })
                 .onErrorResume(e -> {
                     log.error("Error deleting file: {}", e.getMessage());
                     return Mono.just(ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)

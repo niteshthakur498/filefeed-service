@@ -37,6 +37,15 @@ public class GlobalExceptionHandler {
     /**
      * Handle File size limit exceeded exception
      */
+    @ExceptionHandler(UnsupportedFileFormatException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ResponseEntity<String> handleUnSupportedFileFormatException(UnsupportedFileFormatException e) {
+        return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+    }
+
+    /**
+     * Handle File size limit exceeded exception
+     */
     @ExceptionHandler(MaxUploadSizeExceededException.class)
     @ResponseStatus(HttpStatus.PAYLOAD_TOO_LARGE)
     public ResponseEntity<String> handleFileSizeLimitExceededException(MaxUploadSizeExceededException e) {
