@@ -1,5 +1,6 @@
 package com.nitesh.filefeed.service.impl;
 
+import com.nitesh.filefeed.exception.FileNotReceivedException;
 import com.nitesh.filefeed.exception.UnsupportedFileFormatException;
 import com.nitesh.filefeed.model.entity.FileEntity;
 import com.nitesh.filefeed.repository.FileRepository;
@@ -14,6 +15,7 @@ import org.springframework.util.StringUtils;
 import reactor.core.publisher.Mono;
 
 import java.io.FileNotFoundException;
+import java.util.Objects;
 
 @Service
 @RequiredArgsConstructor
@@ -25,31 +27,36 @@ public class FileUploadDbService implements FileUploadService {
 
     @Override
     public Mono<FileEntity> processAndSaveFile(Mono<FilePart> file) {
-        return file.flatMap(filePart -> {
-            // Extract content type (default to "application/octet-stream" if not provided)
-            String contentType = StringUtils.isEmpty(filePart.headers().getContentType().toString()) ? "application/octet-stream" : filePart.headers().getContentType().toString();
-            if(!fileFormatValidator.isValidFormat(filePart.filename())){
-                throw new UnsupportedFileFormatException("UnSupported File Format....");
-            }
-            // Use DataBufferUtils to collect the file content
-            return DataBufferUtils.join(filePart.content()) // Collects all data buffers into a single buffer
-                    .map(dataBuffer -> {
-                        // Convert DataBuffer into byte[] (use direct byte[] conversion, avoiding deprecated methods)
-                        byte[] fileBytes = new byte[dataBuffer.readableByteCount()];
-                        dataBuffer.read(fileBytes); // Read the content into the byte array
-                        return fileBytes; // Return the byte array
-                    })
-                    .flatMap(fileBytes -> {
-                        // Create FileEntity and set the properties
-                        FileEntity fileEntity = new FileEntity();
-                        fileEntity.setFileData(fileBytes);
-                        fileEntity.setFilename(filePart.filename());
-                        fileEntity.setContentType(contentType);
+        return file
+                .switchIfEmpty(Mono.error(new FileNotFoundException("No file provided")))
+                .flatMap(filePart -> {
+                    if(filePart.filename().isEmpty()){
+                        return Mono.error(new FileNotReceivedException("No file provided"));
+                    }
+                    // Extract content type (default to "application/octet-stream" if not provided)
+                    String contentType = Objects.requireNonNull(filePart.headers().getContentType()).toString().isEmpty() ? "application/octet-stream" : filePart.headers().getContentType().toString();
+                    if(!fileFormatValidator.isValidFormat(filePart.filename())){
+                        throw new UnsupportedFileFormatException("UnSupported File Format....");
+                    }
+                    // Use DataBufferUtils to collect the file content
+                    return DataBufferUtils.join(filePart.content()) // Collects all data buffers into a single buffer
+                            .map(dataBuffer -> {
+                                // Convert DataBuffer into byte[] (use direct byte[] conversion, avoiding deprecated methods)
+                                byte[] fileBytes = new byte[dataBuffer.readableByteCount()];
+                                dataBuffer.read(fileBytes); // Read the content into the byte array
+                                return fileBytes; // Return the byte array
+                            })
+                            .flatMap(fileBytes -> {
+                                // Create FileEntity and set the properties
+                                FileEntity fileEntity = new FileEntity();
+                                fileEntity.setFileData(fileBytes);
+                                fileEntity.setFilename(filePart.filename());
+                                fileEntity.setContentType(contentType);
 
-                        // Save the file entity to the repository
-                        return fileRepository.save(fileEntity);  // This returns a Mono<FileEntity>
-                    });
-        });
+                                // Save the file entity to the repository
+                                return fileRepository.save(fileEntity);  // This returns a Mono<FileEntity>
+                            });
+                });
     }
 
 

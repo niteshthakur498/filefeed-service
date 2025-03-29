@@ -17,6 +17,16 @@ public class GlobalExceptionHandler {
     /**
      * Handle FileNotFoundException and send appropriate response.
      */
+    @ExceptionHandler(FileNotReceivedException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ResponseEntity<String> handleFileNotReceivedException(FileNotReceivedException e) {
+        // Log the exception message (you can add more logging if needed)
+        return new ResponseEntity<>("File not Received: " + e.getMessage(), HttpStatus.BAD_REQUEST);
+    }
+
+    /**
+     * Handle FileNotFoundException and send appropriate response.
+     */
     @ExceptionHandler(FileNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<String> handleFileNotFoundException(FileNotFoundException e) {

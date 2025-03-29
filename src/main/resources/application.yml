@@ -31,6 +31,8 @@ file-feed:
     - pdf
     - xlsx
     - json
+    - txt
+    - xls
 
 
 
