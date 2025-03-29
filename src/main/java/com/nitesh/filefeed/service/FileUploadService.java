@@ -6,7 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 import reactor.core.publisher.Mono;
 
 public interface FileUploadService {
-    public Mono<FileEntity> uploadFile(Mono<FilePart> file);
+    public Mono<FileEntity> processAndSaveFile(Mono<FilePart> file);
 
     public Mono<FileEntity> getFileById(Long id);
 }

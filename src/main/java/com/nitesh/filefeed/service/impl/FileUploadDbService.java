@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.buffer.DataBufferUtils;
 import org.springframework.http.codec.multipart.FilePart;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 import reactor.core.publisher.Mono;
 
 import java.util.Objects;
@@ -22,40 +23,32 @@ public class FileUploadDbService implements FileUploadService {
     private final FileRepository fileRepository;
 
     @Override
-    public Mono<FileEntity> uploadFile(Mono<FilePart> file) {
-        log.error("Entered here......................." +  file);
+    public Mono<FileEntity> processAndSaveFile(Mono<FilePart> file) {
+        return file.flatMap(filePart -> {
+            log.error("Entered Here....." + filePart.filename());
 
-        file.doOnNext(fp->log.error("Here->"+fp.filename()))
-                .then(Mono.just("jiijijijijijij...."));
+            // Extract content type
+            String contentType = StringUtils.isEmpty(filePart.headers().getContentType().toString()) ? "application/octet-stream" : filePart.headers().getContentType().toString();
 
-        AtomicReference<String> fileName = new AtomicReference<>("");
-        AtomicReference<String> contentType = new AtomicReference<>("");
-
-        try {
-            file.flatMap(
-                    filePart -> {
-                        log.error("Entered Here....."+filePart.filename());
-                        fileName.set(filePart.filename());
-                        contentType.set(Objects.requireNonNull(filePart.headers().getContentType()).toString());
-                        return DataBufferUtils.join(filePart.content())
-                                .map(dataBuffer -> {
-                                    byte[] fileBytes = new byte[dataBuffer.readableByteCount()];
-                                    dataBuffer.read(fileBytes);
-                                    return fileBytes;
-                                });
+            // Process file content (combine chunks into byte array)
+            return DataBufferUtils.join(filePart.content())
+                    .map(dataBuffer -> {
+                        byte[] fileBytes = new byte[dataBuffer.readableByteCount()];
+                        dataBuffer.read(fileBytes);
+                        return fileBytes;
                     })
-                    .flatMap(fileBytes->{
-                        log.error("Entered Here 3.....");
-                       FileEntity fileEntity = new FileEntity();
-                       fileEntity.setFileData(fileBytes);
-                       fileEntity.setFilename(fileName.get());
-                       fileEntity.setContentType(contentType.get());
-                       return fileRepository.save(fileEntity);
+                    .flatMap(fileBytes -> {
+                        // Create FileEntity and set the properties
+                        log.error("Pricing to check 1234");
+                        FileEntity fileEntity = new FileEntity();
+                        fileEntity.setFileData(fileBytes);
+                        fileEntity.setFilename(filePart.filename());
+                        fileEntity.setContentType(contentType);
+
+                        // Save file entity to the repository and return the Mono<FileEntity>
+                        return fileRepository.save(fileEntity);
                     });
-        } catch (Exception e) {
-            return Mono.error(new RuntimeException("Failed to upload file", e));
-        }
-        return Mono.just(new FileEntity());
+        });
     }
 
     @Override
