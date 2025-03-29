@@ -53,3 +53,145 @@
 25-03-29 13:48:32.065 [reactor-http-nio-3] ERROR c.n.f.controller.FileController - ENtered 2....................... 
 25-03-29 13:48:38.583 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete 
 25-03-29 13:48:38.599 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete 
+25-03-29 15:38:10.278 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final 
+25-03-29 15:38:10.368 [main] INFO  c.n.filefeed.FilefeedApplication - Starting FilefeedApplication using Java 17.0.12 with PID 25700 (C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed\target\classes started by Nitesh Thakur in C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed) 
+25-03-29 15:38:10.368 [main] INFO  c.n.filefeed.FilefeedApplication - No active profile set, falling back to 1 default profile: "default" 
+25-03-29 15:38:11.373 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode. 
+25-03-29 15:38:11.513 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 131 ms. Found 1 R2DBC repository interface. 
+25-03-29 15:38:13.279 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator' 
+25-03-29 15:38:13.957 [main] INFO  liquibase.database - Set default schema name to PUBLIC 
+25-03-29 15:38:14.464 [main] INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG 
+25-03-29 15:38:14.506 [main] INFO  liquibase.ui - Database is up to date, no changesets to execute 
+25-03-29 15:38:14.508 [main] INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG 
+25-03-29 15:38:14.515 [main] INFO  liquibase.util - UPDATE SUMMARY 
+25-03-29 15:38:14.516 [main] INFO  liquibase.util - Run:                          0 
+25-03-29 15:38:14.516 [main] INFO  liquibase.util - Previously run:               1 
+25-03-29 15:38:14.516 [main] INFO  liquibase.util - Filtered out:                 0 
+25-03-29 15:38:14.516 [main] INFO  liquibase.util - ------------------------------- 
+25-03-29 15:38:14.516 [main] INFO  liquibase.util - Total change sets:            1 
+25-03-29 15:38:14.517 [main] INFO  liquibase.util - Update summary generated 
+25-03-29 15:38:14.518 [main] INFO  liquibase.command - Command execution complete 
+25-03-29 15:38:15.677 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http) 
+25-03-29 15:38:15.693 [main] INFO  c.n.filefeed.FilefeedApplication - Started FilefeedApplication in 5.943 seconds (process running for 6.731) 
+25-03-29 15:41:53.054 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete 
+25-03-29 15:41:53.054 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete 
+25-03-29 15:42:00.420 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final 
+25-03-29 15:42:00.497 [main] INFO  c.n.filefeed.FilefeedApplication - Starting FilefeedApplication using Java 17.0.12 with PID 27392 (C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed\target\classes started by Nitesh Thakur in C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed) 
+25-03-29 15:42:00.497 [main] INFO  c.n.filefeed.FilefeedApplication - No active profile set, falling back to 1 default profile: "default" 
+25-03-29 15:42:01.583 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode. 
+25-03-29 15:42:01.724 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 135 ms. Found 1 R2DBC repository interface. 
+25-03-29 15:42:03.447 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator' 
+25-03-29 15:42:04.137 [main] INFO  liquibase.database - Set default schema name to PUBLIC 
+25-03-29 15:42:04.602 [main] INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG 
+25-03-29 15:42:04.641 [main] INFO  liquibase.ui - Database is up to date, no changesets to execute 
+25-03-29 15:42:04.643 [main] INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG 
+25-03-29 15:42:04.650 [main] INFO  liquibase.util - UPDATE SUMMARY 
+25-03-29 15:42:04.650 [main] INFO  liquibase.util - Run:                          0 
+25-03-29 15:42:04.651 [main] INFO  liquibase.util - Previously run:               1 
+25-03-29 15:42:04.651 [main] INFO  liquibase.util - Filtered out:                 0 
+25-03-29 15:42:04.651 [main] INFO  liquibase.util - ------------------------------- 
+25-03-29 15:42:04.651 [main] INFO  liquibase.util - Total change sets:            1 
+25-03-29 15:42:04.652 [main] INFO  liquibase.util - Update summary generated 
+25-03-29 15:42:04.653 [main] INFO  liquibase.command - Command execution complete 
+25-03-29 15:42:05.745 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http) 
+25-03-29 15:42:05.779 [main] INFO  c.n.filefeed.FilefeedApplication - Started FilefeedApplication in 5.822 seconds (process running for 6.546) 
+25-03-29 15:43:29.634 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete 
+25-03-29 15:43:29.634 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete 
+25-03-29 15:43:37.054 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final 
+25-03-29 15:43:37.128 [main] INFO  c.n.filefeed.FilefeedApplication - Starting FilefeedApplication using Java 17.0.12 with PID 23740 (C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed\target\classes started by Nitesh Thakur in C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed) 
+25-03-29 15:43:37.128 [main] INFO  c.n.filefeed.FilefeedApplication - No active profile set, falling back to 1 default profile: "default" 
+25-03-29 15:43:38.152 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode. 
+25-03-29 15:43:38.299 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 140 ms. Found 1 R2DBC repository interface. 
+25-03-29 15:43:39.954 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator' 
+25-03-29 15:43:40.822 [main] INFO  liquibase.database - Set default schema name to PUBLIC 
+25-03-29 15:43:41.347 [main] INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG 
+25-03-29 15:43:41.384 [main] INFO  liquibase.ui - Database is up to date, no changesets to execute 
+25-03-29 15:43:41.386 [main] INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG 
+25-03-29 15:43:41.395 [main] INFO  liquibase.util - UPDATE SUMMARY 
+25-03-29 15:43:41.395 [main] INFO  liquibase.util - Run:                          0 
+25-03-29 15:43:41.395 [main] INFO  liquibase.util - Previously run:               1 
+25-03-29 15:43:41.395 [main] INFO  liquibase.util - Filtered out:                 0 
+25-03-29 15:43:41.395 [main] INFO  liquibase.util - ------------------------------- 
+25-03-29 15:43:41.396 [main] INFO  liquibase.util - Total change sets:            1 
+25-03-29 15:43:41.396 [main] INFO  liquibase.util - Update summary generated 
+25-03-29 15:43:41.397 [main] INFO  liquibase.command - Command execution complete 
+25-03-29 15:43:42.290 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http) 
+25-03-29 15:43:42.316 [main] INFO  c.n.filefeed.FilefeedApplication - Started FilefeedApplication in 5.743 seconds (process running for 6.492) 
+25-03-29 15:44:05.201 [reactor-http-nio-3] ERROR c.n.f.s.impl.FileUploadDbService - Entered Here.....sample_fixedcost_with_level.json 
+25-03-29 15:44:05.228 [reactor-http-nio-3] ERROR c.n.f.s.impl.FileUploadDbService - Pricing to check 1234 
+25-03-29 16:09:44.516 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete 
+25-03-29 16:09:44.516 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete 
+25-03-29 16:09:52.004 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final 
+25-03-29 16:09:52.073 [main] INFO  c.n.filefeed.FilefeedApplication - Starting FilefeedApplication using Java 17.0.12 with PID 17496 (C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed\target\classes started by Nitesh Thakur in C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed) 
+25-03-29 16:09:52.073 [main] INFO  c.n.filefeed.FilefeedApplication - No active profile set, falling back to 1 default profile: "default" 
+25-03-29 16:09:53.220 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode. 
+25-03-29 16:09:53.343 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 123 ms. Found 1 R2DBC repository interface. 
+25-03-29 16:09:55.569 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator' 
+25-03-29 16:09:56.413 [main] INFO  liquibase.database - Set default schema name to PUBLIC 
+25-03-29 16:09:56.926 [main] INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG 
+25-03-29 16:09:56.962 [main] INFO  liquibase.ui - Database is up to date, no changesets to execute 
+25-03-29 16:09:56.964 [main] INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG 
+25-03-29 16:09:56.970 [main] INFO  liquibase.util - UPDATE SUMMARY 
+25-03-29 16:09:56.971 [main] INFO  liquibase.util - Run:                          0 
+25-03-29 16:09:56.971 [main] INFO  liquibase.util - Previously run:               1 
+25-03-29 16:09:56.971 [main] INFO  liquibase.util - Filtered out:                 0 
+25-03-29 16:09:56.971 [main] INFO  liquibase.util - ------------------------------- 
+25-03-29 16:09:56.971 [main] INFO  liquibase.util - Total change sets:            1 
+25-03-29 16:09:56.971 [main] INFO  liquibase.util - Update summary generated 
+25-03-29 16:09:56.972 [main] INFO  liquibase.command - Command execution complete 
+25-03-29 16:09:58.632 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http) 
+25-03-29 16:09:58.648 [main] INFO  c.n.filefeed.FilefeedApplication - Started FilefeedApplication in 7.068 seconds (process running for 7.862) 
+25-03-29 16:10:22.966 [reactor-http-nio-3] INFO  c.n.f.controller.FileController - Request to delete file with ID: 6 
+25-03-29 16:10:22.966 [reactor-http-nio-3] INFO  c.n.f.s.impl.FileUploadDbService - Attempting to delete file with ID: 6 
+25-03-29 16:13:30.492 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete 
+25-03-29 16:13:30.492 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete 
+25-03-29 16:13:38.337 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final 
+25-03-29 16:13:38.466 [main] INFO  c.n.filefeed.FilefeedApplication - Starting FilefeedApplication using Java 17.0.12 with PID 27584 (C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed\target\classes started by Nitesh Thakur in C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed) 
+25-03-29 16:13:38.474 [main] INFO  c.n.filefeed.FilefeedApplication - No active profile set, falling back to 1 default profile: "default" 
+25-03-29 16:13:39.275 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode. 
+25-03-29 16:13:39.432 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 139 ms. Found 1 R2DBC repository interface. 
+25-03-29 16:13:40.920 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator' 
+25-03-29 16:13:41.703 [main] INFO  liquibase.database - Set default schema name to PUBLIC 
+25-03-29 16:13:42.174 [main] INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG 
+25-03-29 16:13:42.211 [main] INFO  liquibase.ui - Database is up to date, no changesets to execute 
+25-03-29 16:13:42.213 [main] INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG 
+25-03-29 16:13:42.220 [main] INFO  liquibase.util - UPDATE SUMMARY 
+25-03-29 16:13:42.220 [main] INFO  liquibase.util - Run:                          0 
+25-03-29 16:13:42.220 [main] INFO  liquibase.util - Previously run:               1 
+25-03-29 16:13:42.220 [main] INFO  liquibase.util - Filtered out:                 0 
+25-03-29 16:13:42.220 [main] INFO  liquibase.util - ------------------------------- 
+25-03-29 16:13:42.220 [main] INFO  liquibase.util - Total change sets:            1 
+25-03-29 16:13:42.221 [main] INFO  liquibase.util - Update summary generated 
+25-03-29 16:13:42.223 [main] INFO  liquibase.command - Command execution complete 
+25-03-29 16:13:43.084 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http) 
+25-03-29 16:13:43.115 [main] INFO  c.n.filefeed.FilefeedApplication - Started FilefeedApplication in 5.33 seconds (process running for 6.203) 
+25-03-29 16:13:51.509 [single-1] ERROR c.n.f.s.impl.FileUploadDbService - Error while retrieving file: File with ID 6 not found. 
+25-03-29 16:13:51.509 [single-1] ERROR c.n.f.controller.FileController - Error during file retrieval: Failed to retrieve file due to internal error. 
+25-03-29 16:16:36.041 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete 
+25-03-29 16:16:36.046 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete 
+25-03-29 16:16:42.726 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final 
+25-03-29 16:16:42.804 [main] INFO  c.n.filefeed.FilefeedApplication - Starting FilefeedApplication using Java 17.0.12 with PID 31344 (C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed\target\classes started by Nitesh Thakur in C:\Users\Nitesh Thakur\Documents\Personal\Projects\checks\filefeed) 
+25-03-29 16:16:42.819 [main] INFO  c.n.filefeed.FilefeedApplication - No active profile set, falling back to 1 default profile: "default" 
+25-03-29 16:16:43.794 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode. 
+25-03-29 16:16:43.935 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 131 ms. Found 1 R2DBC repository interface. 
+25-03-29 16:16:45.794 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator' 
+25-03-29 16:16:46.505 [main] INFO  liquibase.database - Set default schema name to PUBLIC 
+25-03-29 16:16:47.020 [main] INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG 
+25-03-29 16:16:47.067 [main] INFO  liquibase.ui - Database is up to date, no changesets to execute 
+25-03-29 16:16:47.069 [main] INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG 
+25-03-29 16:16:47.077 [main] INFO  liquibase.util - UPDATE SUMMARY 
+25-03-29 16:16:47.077 [main] INFO  liquibase.util - Run:                          0 
+25-03-29 16:16:47.077 [main] INFO  liquibase.util - Previously run:               1 
+25-03-29 16:16:47.077 [main] INFO  liquibase.util - Filtered out:                 0 
+25-03-29 16:16:47.077 [main] INFO  liquibase.util - ------------------------------- 
+25-03-29 16:16:47.077 [main] INFO  liquibase.util - Total change sets:            1 
+25-03-29 16:16:47.078 [main] INFO  liquibase.util - Update summary generated 
+25-03-29 16:16:47.079 [main] INFO  liquibase.command - Command execution complete 
+25-03-29 16:16:47.906 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http) 
+25-03-29 16:16:47.921 [main] INFO  c.n.filefeed.FilefeedApplication - Started FilefeedApplication in 5.617 seconds (process running for 6.409) 
+25-03-29 16:16:52.162 [single-1] ERROR c.n.f.s.impl.FileUploadDbService - Error while retrieving file: File with ID 6 not found. 
+25-03-29 16:16:52.163 [single-1] ERROR c.n.f.controller.FileController - Error during file retrieval: Failed to retrieve file due to internal error. 
+25-03-29 16:17:20.725 [reactor-http-nio-3] ERROR c.n.f.s.impl.FileUploadDbService - Error while retrieving file: File with ID 6 not found. 
+25-03-29 16:17:52.754 [reactor-http-nio-3] ERROR c.n.f.s.impl.FileUploadDbService - Error while retrieving file: File with ID 6 not found. 
+25-03-29 16:20:06.915 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete 
+25-03-29 16:20:06.915 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete 

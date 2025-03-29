@@ -9,4 +9,6 @@ public interface FileUploadService {
     public Mono<FileEntity> processAndSaveFile(Mono<FilePart> file);
 
     public Mono<FileEntity> getFileById(Long id);
+
+    public Mono<String> deleteFile(Long id);
 }

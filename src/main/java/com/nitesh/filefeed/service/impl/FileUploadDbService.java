@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import reactor.core.publisher.Mono;
 
+import java.io.FileNotFoundException;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -53,6 +54,29 @@ public class FileUploadDbService implements FileUploadService {
 
     @Override
     public Mono<FileEntity> getFileById(Long id) {
-        return fileRepository.findById(id);
+        return fileRepository.findById(id)
+                .switchIfEmpty(Mono.error(new FileNotFoundException("File with ID " + id + " not found."))) // Custom error if file not found
+                .onErrorMap(e -> {
+                    log.error("Error while retrieving file: {}", e.getMessage());
+                    return new RuntimeException("Failed to retrieve file due to internal error.");
+                });
+    }
+
+    @Override
+    public Mono<String> deleteFile(Long id) {
+        log.info("Attempting to delete file with ID: " + id);
+
+        // Check if file exists in the database
+        return fileRepository.findById(id)
+                .flatMap(fileEntity -> {
+                    // Delete file and return a success message
+                    return fileRepository.delete(fileEntity)
+                            .then(Mono.just("File deleted successfully: " + fileEntity.getFilename()));
+                })
+                .switchIfEmpty(Mono.error(new FileNotFoundException("File with ID " + id + " not found."))) // Custom error if file not found
+                .onErrorMap(e -> {
+                    log.error("Error while deleting file: " + e.getMessage());
+                    return new RuntimeException("Failed to delete file due to internal error.");
+                });
     }
 }

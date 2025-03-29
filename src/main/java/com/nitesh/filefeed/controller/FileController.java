@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.buffer.DataBufferUtils;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.codec.multipart.FilePart;
@@ -36,18 +37,37 @@ public class FileController {
     }
 
 
-    @GetMapping("/{id}")
-    public Mono<byte[]> getFileById(@PathVariable Long id) {
-        log.error("ENtered 2.......................");
+    @GetMapping("/download/{id}")
+    public Mono<ResponseEntity<byte[]>> getFileById(@PathVariable Long id) {
         return fileUploadService.getFileById(id)
                 .map(fileEntity -> {
-                    // Set appropriate headers to indicate that the response is a file download
                     HttpHeaders headers = new HttpHeaders();
-                    headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+                    String contentType = fileEntity.getContentType();
+                    headers.setContentType(MediaType.parseMediaType(contentType != null ? contentType : "application/octet-stream"));
                     headers.setContentDispositionFormData("attachment", fileEntity.getFilename());
 
-                    return fileEntity.getFileData();  // Returns the byte[] representing the file content
+                    return ResponseEntity.ok()
+                            .headers(headers)
+                            .body(fileEntity.getFileData());  // Returns the byte[] representing the file content
                 })
-                .onErrorResume(e -> Mono.empty());  // Handle file not found or any error
+                .onErrorResume(e -> {
+                    log.error("Error during file retrieval: {}", e.getMessage());
+                    return Mono.just(ResponseEntity.notFound().build());
+                });  // Handle file not found or any error
+    }
+
+    @DeleteMapping("/{id}")
+    public Mono<ResponseEntity<String>> deleteFile(@PathVariable Long id) {
+        log.info("Request to delete file with ID: " + id);
+
+        // Call the service method for deleting the file
+        return fileUploadService.deleteFile(id)
+                .map(ResponseEntity::ok) // On success, return HTTP 200 with message
+                .onErrorResume(e -> {
+                    log.error("Error deleting file: " + e.getMessage());
+                    // If error occurs, return HTTP 500 with error message
+                    return Mono.just(ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                            .body("Failed to delete file: " + e.getMessage()));
+                });
     }
 }
