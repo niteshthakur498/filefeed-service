@@ -1,22 +1,18 @@
 package com.nitesh.filefeed.controller;
 
-import com.nitesh.filefeed.model.entity.FileEntity;
-import com.nitesh.filefeed.repository.FileRepository;
 import com.nitesh.filefeed.service.FileUploadService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.core.io.buffer.DataBufferUtils;
+import org.springframework.core.io.buffer.DataBuffer;
+import org.springframework.core.io.buffer.DataBufferFactory;
+import org.springframework.core.io.buffer.DefaultDataBufferFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.codec.multipart.FilePart;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 import reactor.core.publisher.Mono;
-
-import java.util.Objects;
-import java.util.concurrent.atomic.AtomicReference;
 
 @RestController
 @RequestMapping("/api/files")
@@ -31,41 +27,44 @@ public class FileController {
         return fileUploadService.processAndSaveFile(file)
                 .map(savedFile -> "File uploaded successfully: " + savedFile.getId() + "--" + savedFile.getFilename())
                 .onErrorResume(e -> {
-                    log.error("Error during file processing: " + e.getMessage());
+                    log.error("Error during file processing: {}", e.getMessage());
                     return Mono.just("Failed to upload file: " + e.getMessage());
                 });
     }
 
-
     @GetMapping("/download/{id}")
-    public Mono<ResponseEntity<byte[]>> getFileById(@PathVariable Long id) {
+    public Mono<ResponseEntity<DataBuffer>> getFileById(@PathVariable Long id) {
         return fileUploadService.getFileById(id)
-                .map(fileEntity -> {
+                .flatMap(fileEntity -> {
                     HttpHeaders headers = new HttpHeaders();
                     String contentType = fileEntity.getContentType();
                     headers.setContentType(MediaType.parseMediaType(contentType != null ? contentType : "application/octet-stream"));
                     headers.setContentDispositionFormData("attachment", fileEntity.getFilename());
 
-                    return ResponseEntity.ok()
+                    // Create DataBufferFactory
+                    DataBufferFactory factory = new DefaultDataBufferFactory();
+
+                    // Create a DataBuffer from byte[] (wrap the byte[] into DataBuffer)
+                    DataBuffer dataBuffer = factory.wrap(fileEntity.getFileData());  // wrap byte[] into DataBuffer
+
+                    return Mono.just(ResponseEntity.ok()
                             .headers(headers)
-                            .body(fileEntity.getFileData());  // Returns the byte[] representing the file content
+                            .body(dataBuffer));  // Returning DataBuffer for reactive processing
                 })
                 .onErrorResume(e -> {
                     log.error("Error during file retrieval: {}", e.getMessage());
-                    return Mono.just(ResponseEntity.notFound().build());
-                });  // Handle file not found or any error
+                    return Mono.just(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
+                });
     }
+
 
     @DeleteMapping("/{id}")
     public Mono<ResponseEntity<String>> deleteFile(@PathVariable Long id) {
-        log.info("Request to delete file with ID: " + id);
-
-        // Call the service method for deleting the file
+        log.info("Request to delete file with ID: {}", id);
         return fileUploadService.deleteFile(id)
-                .map(ResponseEntity::ok) // On success, return HTTP 200 with message
+                .map(deletedMessage -> ResponseEntity.ok(deletedMessage))
                 .onErrorResume(e -> {
-                    log.error("Error deleting file: " + e.getMessage());
-                    // If error occurs, return HTTP 500 with error message
+                    log.error("Error deleting file: {}", e.getMessage());
                     return Mono.just(ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                             .body("Failed to delete file: " + e.getMessage()));
                 });

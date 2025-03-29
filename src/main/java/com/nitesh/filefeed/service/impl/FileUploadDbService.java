@@ -12,50 +12,46 @@ import org.springframework.util.StringUtils;
 import reactor.core.publisher.Mono;
 
 import java.io.FileNotFoundException;
-import java.util.Objects;
-import java.util.concurrent.atomic.AtomicReference;
 
 @Service
 @RequiredArgsConstructor
 @Slf4j
 public class FileUploadDbService implements FileUploadService {
 
-
     private final FileRepository fileRepository;
 
     @Override
     public Mono<FileEntity> processAndSaveFile(Mono<FilePart> file) {
         return file.flatMap(filePart -> {
-            log.error("Entered Here....." + filePart.filename());
-
-            // Extract content type
+            // Extract content type (default to "application/octet-stream" if not provided)
             String contentType = StringUtils.isEmpty(filePart.headers().getContentType().toString()) ? "application/octet-stream" : filePart.headers().getContentType().toString();
 
-            // Process file content (combine chunks into byte array)
-            return DataBufferUtils.join(filePart.content())
+            // Use DataBufferUtils to collect the file content
+            return DataBufferUtils.join(filePart.content()) // Collects all data buffers into a single buffer
                     .map(dataBuffer -> {
+                        // Convert DataBuffer into byte[] (use direct byte[] conversion, avoiding deprecated methods)
                         byte[] fileBytes = new byte[dataBuffer.readableByteCount()];
-                        dataBuffer.read(fileBytes);
-                        return fileBytes;
+                        dataBuffer.read(fileBytes); // Read the content into the byte array
+                        return fileBytes; // Return the byte array
                     })
                     .flatMap(fileBytes -> {
                         // Create FileEntity and set the properties
-                        log.error("Pricing to check 1234");
                         FileEntity fileEntity = new FileEntity();
                         fileEntity.setFileData(fileBytes);
                         fileEntity.setFilename(filePart.filename());
                         fileEntity.setContentType(contentType);
 
-                        // Save file entity to the repository and return the Mono<FileEntity>
-                        return fileRepository.save(fileEntity);
+                        // Save the file entity to the repository
+                        return fileRepository.save(fileEntity);  // This returns a Mono<FileEntity>
                     });
         });
     }
 
+
     @Override
     public Mono<FileEntity> getFileById(Long id) {
         return fileRepository.findById(id)
-                .switchIfEmpty(Mono.error(new FileNotFoundException("File with ID " + id + " not found."))) // Custom error if file not found
+                .switchIfEmpty(Mono.error(new FileNotFoundException("File with ID " + id + " not found.")))
                 .onErrorMap(e -> {
                     log.error("Error while retrieving file: {}", e.getMessage());
                     return new RuntimeException("Failed to retrieve file due to internal error.");
@@ -64,18 +60,17 @@ public class FileUploadDbService implements FileUploadService {
 
     @Override
     public Mono<String> deleteFile(Long id) {
-        log.info("Attempting to delete file with ID: " + id);
+        log.info("Attempting to delete file with ID: {}", id);
 
-        // Check if file exists in the database
         return fileRepository.findById(id)
                 .flatMap(fileEntity -> {
-                    // Delete file and return a success message
+                    // Delete the file and return a success message
                     return fileRepository.delete(fileEntity)
                             .then(Mono.just("File deleted successfully: " + fileEntity.getFilename()));
                 })
-                .switchIfEmpty(Mono.error(new FileNotFoundException("File with ID " + id + " not found."))) // Custom error if file not found
+                .switchIfEmpty(Mono.error(new FileNotFoundException("File with ID " + id + " not found.")))
                 .onErrorMap(e -> {
-                    log.error("Error while deleting file: " + e.getMessage());
+                    log.error("Error while deleting file: {}", e.getMessage());
                     return new RuntimeException("Failed to delete file due to internal error.");
                 });
     }
