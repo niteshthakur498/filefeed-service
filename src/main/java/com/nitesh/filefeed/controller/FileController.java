@@ -40,7 +40,7 @@ public class FileController {
                     ResponseWrapper<FileMetadata> response = new ResponseWrapper<>(
                             HttpStatus.OK.value(),
                             "File uploaded successfully",
-                            FileMetadata.builder().fileId(savedFile.getId().toString()).fileName(savedFile.getFilename()).build(),
+                            FileMetadata.builder().id(savedFile.getId().toString()).fileName(savedFile.getFilename()).build(),
                             Collections.emptyList()
                     );
                     return ResponseEntity.status(HttpStatus.OK).body(response);
@@ -58,6 +58,7 @@ public class FileController {
     public Mono<ResponseEntity<DataBuffer>> getFileById(@PathVariable Long id) {
         return fileUploadService.getFileById(id)
                 .flatMap(fileEntity -> {
+                    log.debug("received file .....{}", fileEntity.getFilename());
                     HttpHeaders headers = new HttpHeaders();
                     String contentType = fileEntity.getContentType();
                     headers.setContentType(MediaType.parseMediaType(contentType != null ? contentType : "application/octet-stream"));
@@ -83,11 +84,6 @@ public class FileController {
     public Mono<ResponseEntity<ResponseWrapper<FileMetadata>>> getFileMetadata(@PathVariable Long id, ServerHttpRequest request) {
         return fileUploadService.getFileById(id)
                 .flatMap(fileEntity -> {
-                    // Create the metadata
-//                    String downloadUrl = ServletUriComponentsBuilder.fromCurrentContextPath()
-//                            .path("/api/files/download/")
-//                            .path(String.valueOf(id))
-//                            .toUriString();
 
                     String downloadUrl = UriComponentsBuilder.fromUri(request.getURI())
                             .path("/download")
@@ -97,7 +93,7 @@ public class FileController {
                     ResponseWrapper<FileMetadata> response = new ResponseWrapper<>(
                             HttpStatus.OK.value(),
                             "File uploaded successfully",
-                            FileMetadata.builder().fileId(fileEntity.getId().toString())
+                            FileMetadata.builder().id(fileEntity.getId().toString())
                                     .fileName(fileEntity.getFilename())
                                     .contentType(fileEntity.getContentType())
                                     .url(downloadUrl)

@@ -116,7 +116,7 @@ public class GlobalExceptionHandler {
         // Wrap response in ResponseWrapper
         ResponseWrapper<String> responseWrapper = new ResponseWrapper<>(
                 e.getStatusCode().value(),
-                e.getReason(),
+                e.getMessage(),
                 null,
                 errorDetails
         );

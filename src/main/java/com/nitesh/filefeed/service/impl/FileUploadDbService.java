@@ -66,7 +66,7 @@ public class FileUploadDbService implements FileUploadService {
                 .switchIfEmpty(Mono.error(new FileNotFoundException("File with ID " + id + " not found.")))
                 .onErrorMap(e -> {
                     log.error("Error while retrieving file: {}", e.getMessage());
-                    return new RuntimeException("Failed to retrieve file due to internal error.");
+                    return e;
                 });
     }
 
@@ -83,7 +83,7 @@ public class FileUploadDbService implements FileUploadService {
                 .switchIfEmpty(Mono.error(new FileNotFoundException("File with ID " + id + " not found.")))
                 .onErrorMap(e -> {
                     log.error("Error while deleting file: {}", e.getMessage());
-                    return new RuntimeException("Failed to delete file due to internal error.");
+                    return e;
                 });
     }
 }
