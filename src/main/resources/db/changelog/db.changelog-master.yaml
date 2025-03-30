@@ -19,3 +19,14 @@ databaseChangeLog:
               - column:
                   name: file_data
                   type: bytea
+
+  - changeSet:
+      id: 2
+      author: niteshthakur
+      changes:
+        - addColumn:
+            tableName: file_entity
+            columns:
+              - column:
+                  name: external_reference
+                  type: varchar(255)

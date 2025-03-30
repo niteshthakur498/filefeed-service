@@ -1,4 +1,4 @@
-package com.nitesh.filefeed.dto;
+package com.nitesh.filefeed.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;

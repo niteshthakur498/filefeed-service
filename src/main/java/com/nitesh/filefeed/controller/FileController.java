@@ -1,7 +1,7 @@
 package com.nitesh.filefeed.controller;
 
-import com.nitesh.filefeed.dto.FileMetadata;
-import com.nitesh.filefeed.dto.ResponseWrapper;
+import com.nitesh.filefeed.model.dto.FileMetadata;
+import com.nitesh.filefeed.model.dto.ResponseWrapper;
 import com.nitesh.filefeed.service.FileUploadService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.codec.multipart.FilePart;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ServerWebExchange;
 import org.springframework.web.util.UriComponentsBuilder;
 import reactor.core.publisher.Mono;
 
@@ -32,15 +31,21 @@ public class FileController {
      * Endpoint to upload a file.
      */
     @PostMapping("/upload")
-    public Mono<ResponseEntity<ResponseWrapper<FileMetadata>>> uploadFile(Mono<FilePart> file) {
-        return fileUploadService.processAndSaveFile(file)
+    public Mono<ResponseEntity<ResponseWrapper<FileMetadata>>> uploadFile(@RequestPart(required = false) String externalReference,
+                                                                          Mono<FilePart> file) {
+        log.info("Given Ext Ref Number --" + externalReference);
+        return fileUploadService.processAndSaveFile(externalReference,file)
                 .doOnSuccess(savedFile -> log.info("File uploaded successfully: {}", savedFile.getFilename()))
                 .map(savedFile -> {
                     // Success response wrapped in ResponseWrapper
                     ResponseWrapper<FileMetadata> response = new ResponseWrapper<>(
                             HttpStatus.OK.value(),
                             "File uploaded successfully",
-                            FileMetadata.builder().id(savedFile.getId().toString()).fileName(savedFile.getFilename()).build(),
+                            FileMetadata.builder().id(savedFile.getId().toString())
+                                    .fileName(savedFile.getFilename())
+                                    .externalReference(savedFile.getExternalReference())
+                                    .contentType(savedFile.getContentType())
+                                    .build(),
                             Collections.emptyList()
                     );
                     return ResponseEntity.status(HttpStatus.OK).body(response);
@@ -97,6 +102,7 @@ public class FileController {
                                     .fileName(fileEntity.getFilename())
                                     .contentType(fileEntity.getContentType())
                                     .url(downloadUrl)
+                                    .externalReference(fileEntity.getExternalReference())
                                     .build(),
                             Collections.emptyList()
                     );

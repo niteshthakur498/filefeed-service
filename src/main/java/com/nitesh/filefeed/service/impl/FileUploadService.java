@@ -4,14 +4,12 @@ import com.nitesh.filefeed.exception.FileNotReceivedException;
 import com.nitesh.filefeed.exception.UnsupportedFileFormatException;
 import com.nitesh.filefeed.model.entity.FileEntity;
 import com.nitesh.filefeed.repository.FileRepository;
-import com.nitesh.filefeed.service.FileUploadService;
 import com.nitesh.filefeed.utils.FileFormatValidator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.buffer.DataBufferUtils;
 import org.springframework.http.codec.multipart.FilePart;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 import reactor.core.publisher.Mono;
 
 import java.io.FileNotFoundException;
@@ -20,13 +18,13 @@ import java.util.Objects;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class FileUploadDbService implements FileUploadService {
+public class FileUploadService implements com.nitesh.filefeed.service.FileUploadService {
 
     private final FileRepository fileRepository;
     private final FileFormatValidator fileFormatValidator;
 
     @Override
-    public Mono<FileEntity> processAndSaveFile(Mono<FilePart> file) {
+    public Mono<FileEntity> processAndSaveFile(String externalReference,Mono<FilePart> file) {
         return file
                 .switchIfEmpty(Mono.error(new FileNotFoundException("No file provided")))
                 .flatMap(filePart -> {
@@ -52,6 +50,7 @@ public class FileUploadDbService implements FileUploadService {
                                 fileEntity.setFileData(fileBytes);
                                 fileEntity.setFilename(filePart.filename());
                                 fileEntity.setContentType(contentType);
+                                fileEntity.setExternalReference(externalReference);
 
                                 // Save the file entity to the repository
                                 return fileRepository.save(fileEntity);  // This returns a Mono<FileEntity>

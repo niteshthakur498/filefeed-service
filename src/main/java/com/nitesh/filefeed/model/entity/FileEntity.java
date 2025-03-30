@@ -18,6 +18,7 @@ public class FileEntity {
     @Id
     private Long id;
     private String filename;
+    private String externalReference;
     private String contentType;
     private byte[] fileData;
 

@@ -1,4 +1,4 @@
-package com.nitesh.filefeed.dto;
+package com.nitesh.filefeed.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

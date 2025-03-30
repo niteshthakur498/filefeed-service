@@ -1,5 +1,6 @@
-package com.nitesh.filefeed.dto;
+package com.nitesh.filefeed.model.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,6 +17,7 @@ public class FileMetadata {
 
     private String contentType;
 
+    @JsonIgnore
     private String url;
 
     @JsonProperty("file_name")
